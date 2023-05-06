@@ -1,5 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 #logo-section {
-    background-image: url("./61897.jpg");
+    background-image: url("./gwen-king-3OdajQGd9sk-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#logo-section img {
+    width: 150px;
 }
