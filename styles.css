@@ -1,161 +1,161 @@
 @font-face {
-    font-family: Norse Bold;
-    src: url("./Norse-Bold/Norse-Bold.eot");
-    src: url("./Norse-Bold/Norse-Bold.svg");
-    src: url("./Norse-Bold/Norse-Bold.ttf");
-    src: url("./Norse-Bold/Norse-Bold.woff");
+  font-family: Norse Bold;
+  src: url("./Norse-Bold/Norse-Bold.eot");
+  src: url("./Norse-Bold/Norse-Bold.svg");
+  src: url("./Norse-Bold/Norse-Bold.ttf");
+  src: url("./Norse-Bold/Norse-Bold.woff");
 }
 
 @font-face {
-    font-family: Daruma-Drop;
-    src: url("./Daruma-Drop/DarumadropOne-Regular.ttf");
+  font-family: Daruma-Drop;
+  src: url("./Daruma-Drop/DarumadropOne-Regular.ttf");
 }
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    height: 700px;
-    font-family: Daruma-Drop, sans-serif;
-    color: antiquewhite;
+  height: 700px;
+  font-family: Daruma-Drop, sans-serif;
+  color: antiquewhite;
 }
 
 main {
-    height: 100%;
+  height: 100%;
 }
 
 a {
-    text-decoration: none;
-    color: antiquewhite;
+  text-decoration: none;
+  color: antiquewhite;
 }
 
 #logo-section {
-    background-image: url("./gwen-king-3OdajQGd9sk-unsplash.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    float: left;
-    height: 100%;
-    width: 40%;
-    color: antiquewhite;
+  background-image: url("./gwen-king-3OdajQGd9sk-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  float: left;
+  height: 100%;
+  width: 40%;
+  color: antiquewhite;
 }
 
 #logo-section div:first-child {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.2);
-    position: absolute;
-    top: 20%;
-    width: 40%;
-    gap: 20px;
-    font-family: Norse Bold, sans-serif;
-    font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 20%;
+  width: 40%;
+  gap: 20px;
+  font-family: Norse Bold, sans-serif;
+  font-size: 40px;
 }
 
 #logo-section div:last-child {
-    position: absolute;
-    top: 100%;
-    left: 10%;
-    font-size: 20px;
-    background-color: rgba(0,0,0,0.2);
+  position: absolute;
+  top: 100%;
+  left: 10%;
+  font-size: 20px;
+  background-color: rgba(0,0,0,0.2);
 }
 
 #logo-section img {
-    width: 100px;
+  width: 100px;
 }
 
 #form-section {
-    float: right;
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
-    background-color: rgb(2, 0, 20);
+  float: right;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  background-color: rgb(2, 0, 20);
 }
 
 .info {
-    padding: 0 5vw;
+  padding: 0 5vw;
 }
 
 form {
-    background-color: black;
-    width: 100%;
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5vh;
+  background-color: black;
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5vh;
 }
 
 legend {
-    align-self: flex-start;
-    font-size: 1.5em;
-    padding-left: 24%;;
+  align-self: flex-start;
+  font-size: 1.5em;
+  padding-left: 24%;;
 }
 
 .inputs {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .names {
-    display: flex;
-    gap: 5vw;
+  display: flex;
+  gap: 5vw;
 }
 
 input {
-    height: 4vh;
-    border-radius: 5px;
-    padding: 0 5px;
-    border: none;
-    transition: all 0.5s ease-in-out;
+  height: 4vh;
+  border-radius: 5px;
+  padding: 0 5px;
+  border: none;
+  transition: all 0.5s ease-in-out;
 }
 
 button {
-    width: 200px;
-    height: 40px;
-    background-color: crimson;
-    border: none;
-    border-radius: 5px;
-    font-family: Daruma-Drop, sans-serif;
-    font-size: 1.2em;
-    transition: all 0.5s ease-in-out;
+  width: 200px;
+  height: 40px;
+  background-color: crimson;
+  border: none;
+  border-radius: 5px;
+  font-family: Daruma-Drop, sans-serif;
+  font-size: 1.2em;
+  transition: all 0.5s ease-in-out;
 }
 
 #form-section p {
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
 
 #form-section p a {
-    color: crimson;
+  color: crimson;
 }
 
 input:valid {
-    border: 2px solid green;
+  border: 2px solid green;
 }
 
 input:invalid {
-    border: 2px solid crimson;
+  border: 2px solid crimson;
 }
 
 input:focus {
-    outline: none;
-    box-shadow: 0px 0px 10px pink;
+  outline: none;
+  box-shadow: 0 0 10px pink;
 }
 
 button:hover {
-    cursor: pointer;
-    background-color: black;
-    color: crimson;
-    border: 1px solid crimson;
-    transform: scale(1.1);
+  cursor: pointer;
+  background-color: black;
+  color: crimson;
+  border: 1px solid crimson;
+  transform: scale(1.1);
 }
 
 .italice {
-    font-style: italic;
+  font-style: italic;
 }
