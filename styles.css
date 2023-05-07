@@ -91,6 +91,7 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 5vh;
 }
 
 .inputs {
@@ -101,4 +102,11 @@ form {
 .names {
     display: flex;
     gap: 5vw;
+}
+
+input {
+    height: 4vh;
+    border-radius: 5px;
+    padding: 0 5px;
+    border: none;
 }
