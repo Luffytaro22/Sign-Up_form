@@ -116,3 +116,13 @@ input {
     padding: 0 5px;
     border: none;
 }
+
+button {
+    width: 200px;
+    height: 40px;
+    background-color: crimson;
+    border: none;
+    border-radius: 5px;
+    font-family: Daruma-Drop, sans-serif;
+    font-size: 1.2em;
+}
