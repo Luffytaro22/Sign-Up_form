@@ -155,3 +155,7 @@ button:hover {
     border: 1px solid crimson;
     transform: scale(1.1);
 }
+
+.italice {
+    font-style: italic;
+}
