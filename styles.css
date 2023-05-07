@@ -126,3 +126,11 @@ button {
     font-family: Daruma-Drop, sans-serif;
     font-size: 1.2em;
 }
+
+#form-section p {
+    font-size: 1.2em;
+}
+
+#form-section p a {
+    color: crimson;
+}
