@@ -89,9 +89,16 @@ form {
     height: 30vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .inputs {
     display: flex;
     flex-direction: column;
+}
+
+.names {
+    display: flex;
+    gap: 5vw;
 }
