@@ -125,6 +125,7 @@ button {
     border-radius: 5px;
     font-family: Daruma-Drop, sans-serif;
     font-size: 1.2em;
+    transition: all 0.5s ease-in-out;
 }
 
 #form-section p {
@@ -133,4 +134,24 @@ button {
 
 #form-section p a {
     color: crimson;
+}
+
+input:valid {
+    border: 2px solid green;
+}
+
+input:invalid {
+    border: 2px solid crimson;
+}
+
+input:focus {
+    outline: none;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: black;
+    color: crimson;
+    border: 1px solid crimson;
+    transform: scale(1.1);
 }
