@@ -15,8 +15,8 @@
                 <h1>JAPAN</h1>
             </div>
             <div>
-                <p>Photo by <a href="https://unsplash.com/es/@gwenking">Gwen King</a> on <a href="https://unsplash.com/photos/25xggax4bSA">Unsplash</a></p>
-                <p>Logo by <a href="https://www.freepik.es/vector-gratis/vector-banner-acuarela-verde-redondo_3439500.htm#page=2&query=logo%20png&position=14&from_view=keyword&track=ais">rawpixel</a></p>
+                <p>Photo by <a href="https://unsplash.com/es/@gwenking" target="_blank" rel="noopener">Gwen King</a> on <a href="https://unsplash.com/photos/25xggax4bSA" target="_blank" rel="noopener">Unsplash</a></p>
+                <p>Logo by <a href="https://www.freepik.es/vector-gratis/vector-banner-acuarela-verde-redondo_3439500.htm#page=2&query=logo%20png&position=14&from_view=keyword&track=ais" target="_blank" rel="noopener">rawpixel</a></p>
             </div>
         </section>
         <section id="form-section">
@@ -31,22 +31,34 @@
             <form action="">
                 <legend>Let's do this!</legend>
                 <div class="names">
-                    <label for="first-name">FIRST NAME</label>
-                    <input type="text" name="First_name" id="first-name" required>
-                    <label for="last-name">LAST NAME</label>
-                    <input type="text" name="Last_name" id="last-name" required>
+                    <div class="inputs">
+                        <label for="first-name">FIRST NAME</label>
+                        <input type="text" name="First_name" id="first-name" required>
+                    </div>
+                    <div class="inputs">
+                        <label for="last-name">LAST NAME</label>
+                        <input type="text" name="Last_name" id="last-name" required>
+                    </div>
                 </div>
                 <div class="email-number">
-                    <label for="email">EMAIL</label>
-                    <input type="email" name="Email" id="email" required>
-                    <label for="phone">PHONE NUMBER</label>
-                    <input type="number" name="phone_number" id="phone" required>
+                    <div class="inputs">
+                        <label for="email">EMAIL</label>
+                        <input type="email" name="Email" id="email" required>
+                    </div>
+                    <div class="inputs">
+                        <label for="phone">PHONE NUMBER</label>
+                        <input type="number" name="phone_number" id="phone" required>
+                    </div>
                 </div>
                 <div class="password">
-                    <label for="password">PASSWORD</label>
-                    <input type="password" name="password" id="password" required>
-                    <label for="pss-confirm">CONFIRM PASSWORD</label>
-                    <input type="password" name="password" id="pss-confirm" required>
+                    <div class="inputs">
+                        <label for="password">PASSWORD</label>
+                        <input type="password" name="password" id="password" required>
+                    </div>
+                    <div class="inputs">
+                        <label for="pss-confirm">CONFIRM PASSWORD</label>
+                        <input type="password" name="password" id="pss-confirm" required>
+                    </div>
                 </div>
                 <button type="submit">Create Account</button>
             </form>
