@@ -86,12 +86,18 @@ a {
 form {
     background-color: black;
     width: 100%;
-    height: 30vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 5vh;
+}
+
+legend {
+    align-self: flex-start;
+    font-size: 1.5em;
+    padding-left: 24%;;
 }
 
 .inputs {
