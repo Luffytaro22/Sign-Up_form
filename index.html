@@ -36,30 +36,36 @@
                     <div class="inputs">
                         <label for="first-name">FIRST NAME</label>
                         <input type="text" name="First_name" id="first-name" required>
+                        <span class="error"></span>
                     </div>
                     <div class="inputs">
                         <label for="last-name">LAST NAME</label>
                         <input type="text" name="Last_name" id="last-name" required>
+                        <span class="error"></span>
                     </div>
                 </div>
                 <div class="names">
                     <div class="inputs">
                         <label for="email">EMAIL</label>
                         <input type="email" name="Email" id="email" required>
+                        <span class="error"></span>
                     </div>
                     <div class="inputs">
                         <label for="phone">PHONE NUMBER</label>
                         <input type="number" name="phone_number" id="phone" required>
+                        <span class="error"></span>
                     </div>
                 </div>
                 <div class="names">
                     <div class="inputs">
                         <label for="password">PASSWORD</label>
                         <input type="password" name="password" id="password" path="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$" required>
+                        <span class="error"></span>
                     </div>
                     <div class="inputs">
                         <label for="pss-confirm">CONFIRM PASSWORD</label>
                         <input type="password" name="password" id="pss-confirm" required>
+                        <span class="error"></span>
                     </div>
                 </div>
                 <button type="submit">Create Account</button>
