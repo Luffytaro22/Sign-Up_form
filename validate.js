@@ -58,7 +58,7 @@ function errorPhone() {
   } else if (phone.value.length < 8) {
     spanPhone.textContent = `* Enter at least ${phone.minLength} characters, you have ${phone.value.length}.`;
   } else if (phone.value.length > 10) {
-    spanPhone.textContent = `* Enter a maximun of ${phone.axLength} characters.`;
+    spanPhone.textContent = `* Enter a maximun of ${phone.maxLength} characters.`;
   }
 }
 
@@ -103,7 +103,9 @@ email.addEventListener('input', () => {
 });
 
 phone.addEventListener('input', () => {
-  if (phone.validity.valid) {
+  if (phone.value.length < 8 || phone.value.length > 10) {
+    errorPhone();
+  } else if (phone.validity.valid) {
     spanPhone.textContent = '';
     spanPhone.className = 'error';
   } else {
