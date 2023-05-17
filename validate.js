@@ -35,7 +35,7 @@ function errorFName() {
 }
 
 function errorLName() {
-  if (lastName.vallidity.valueMissing) {
+  if (lastName.validity.valueMissing) {
     spanLName.textContent = '* Enter a value';
   } else if (lastName.validity.typeMismatch) {
     spanLName.textContent = '* Please enter a valid value';
