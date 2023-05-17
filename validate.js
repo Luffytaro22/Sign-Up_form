@@ -10,6 +10,7 @@ const phone = document.querySelector('#phone');
 const spanPhone = document.querySelector('#phone + span');
 const spanPass = document.querySelector('#password + span');
 const spanValid = document.querySelector('#pss-confirm + span');
+const form = document.querySelector('form');
 
 /* Validates the information in the Confirm Password input */
 function validate() {
@@ -17,6 +18,8 @@ function validate() {
     spanValid.textContent = '* Enter a value';
   } else if (valPassword.value !== password.value) {
     spanValid.textContent = '* Passwords do not match';
+  } else if (valPassword.validity.valid) {
+    spanValid.textContent = '✓ Passwords match';
   }
 }
 
@@ -64,6 +67,52 @@ function errorPassword() {
     spanPass.textContent = '* Please enter a valid value';
   }
 }
+
+/* Adding event listener to the inputs */
+firstName.addEventListener('input', () => {
+  if (firstName.validity.valid) {
+    spanFName.textContent = '';
+    spanFName.className = 'error';
+  } else {
+    errorName();
+  }
+});
+
+lastName.addEventListener('input', () => {
+  if (lastName.validity.valid) {
+    spanLName.textContent = '';
+    spanLName.className = 'error';
+  } else {
+    errorName();
+  }
+});
+
+email.addEventListener('input', () => {
+  if (email.validity.valid) {
+    spanEmail.textContent = '';
+    spanEmail.className = 'error';
+  } else {
+    errorEmail();
+  }
+});
+
+phone.addEventListener('input', () => {
+  if (phone.validity.valid) {
+    phone.textContent = '';
+    phone.className = 'error';
+  } else {
+    errorPhone();
+  }
+});
+
+password.addEventListener('input', () => {
+  if (password.validity.valid) {
+    spanPass.textContent = '';
+    spanPass.className = 'error';
+  } else {
+    errorPassword();
+  }
+});
 
 valPassword.addEventListener('input', validate);
 password.addEventListener('input', validate);
