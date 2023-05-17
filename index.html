@@ -30,7 +30,7 @@
                 You <span class="italice">know</span> you want to.
                 </h2>
             </div>
-            <form action="https://formspree.io/f/xeqwndjy" method="post">
+            <form action="https://formspree.io/f/xeqwndjy" method="post" novalidate>
                 <legend>Let's do this!</legend>
                 <div class="names">
                     <div class="inputs">
@@ -47,12 +47,12 @@
                 <div class="names">
                     <div class="inputs">
                         <label for="email">EMAIL</label>
-                        <input type="email" name="Email" id="email" required>
+                        <input type="email" name="Email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                         <span class="error"></span>
                     </div>
                     <div class="inputs">
                         <label for="phone">PHONE NUMBER</label>
-                        <input type="number" name="phone_number" id="phone" required>
+                        <input type="number" name="phone_number" id="phone" maxlength="10" minlength="8" required>
                         <span class="error"></span>
                     </div>
                 </div>
