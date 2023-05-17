@@ -18,18 +18,23 @@ function validate() {
     spanValid.textContent = '* Enter a value';
   } else if (valPassword.value !== password.value) {
     spanValid.textContent = '* Passwords do not match';
-  } else if (valPassword.validity.valid) {
+    valPassword.setCustomValidity('* Passwords do not match');
+  } else {
     spanValid.textContent = '✓ Passwords match';
+    valPassword.setCustomValidity('');
   }
 }
 
 /* A function that displays the errors in the Name's inputs */
-function errorName() {
+function errorFName() {
   if (firstName.validity.valueMissing) {
     spanFName.textContent = '* Enter a value';
   } else if (firstName.validity.typeMismatch) {
     spanFName.textContent = '* Please enter a valid value';
   }
+}
+
+function errorLName() {
   if (lastName.vallidity.valueMissing) {
     spanLName.textContent = '* Enter a value';
   } else if (lastName.validity.typeMismatch) {
@@ -50,11 +55,9 @@ function errorEmail() {
 function errorPhone() {
   if (phone.validity.valueMissing) {
     spanPhone.textContent = '* Enter a value';
-  } else if (phone.validity.typeMismatch) {
-    spanPhone.textContent = '* Please enter just numbers';
-  } else if (phone.validity.tooShort) {
+  } else if (phone.value.length < 8) {
     spanPhone.textContent = `* Enter at least ${phone.minLength} characters, you have ${phone.value.length}.`;
-  } else if (phone.validity.tooLong) {
+  } else if (phone.value.length > 10) {
     spanPhone.textContent = `* Enter a maximun of ${phone.axLength} characters.`;
   }
 }
@@ -63,6 +66,9 @@ function errorPhone() {
 function errorPassword() {
   if (password.validity.valueMissing) {
     spanPass.textContent = '* Enter a value';
+  } else if (valPassword.value !== password.value) {
+    spanValid.textContent = '* Passwords do not match';
+    valPassword.setCustomValidity('* Passwords do not match');
   } else if (password.validity.typeMismatch) {
     spanPass.textContent = '* Please enter a valid value';
   }
@@ -74,7 +80,7 @@ firstName.addEventListener('input', () => {
     spanFName.textContent = '';
     spanFName.className = 'error';
   } else {
-    errorName();
+    errorFName();
   }
 });
 
@@ -83,7 +89,7 @@ lastName.addEventListener('input', () => {
     spanLName.textContent = '';
     spanLName.className = 'error';
   } else {
-    errorName();
+    errorLName();
   }
 });
 
@@ -98,15 +104,17 @@ email.addEventListener('input', () => {
 
 phone.addEventListener('input', () => {
   if (phone.validity.valid) {
-    phone.textContent = '';
-    phone.className = 'error';
+    spanPhone.textContent = '';
+    spanPhone.className = 'error';
   } else {
     errorPhone();
   }
 });
 
 password.addEventListener('input', () => {
-  if (password.validity.valid) {
+  if (password.value !== valPassword.value) {
+    errorPassword();
+  } else if (password.validity.valid) {
     spanPass.textContent = '';
     spanPass.className = 'error';
   } else {
@@ -115,4 +123,24 @@ password.addEventListener('input', () => {
 });
 
 valPassword.addEventListener('input', validate);
-password.addEventListener('input', validate);
+
+form.addEventListener('submit', (event) => {
+  if (!firstName.validity.valid) {
+    errorFName();
+    event.preventDefault();
+  } else if (!lastName.validity.valid) {
+    errorFName();
+    event.preventDefault();
+  } else if (!email.validity.valid) {
+    errorEmail();
+    event.preventDefault();
+  } else if (!phone.validity.valid) {
+    errorPhone();
+    event.preventDefault();
+  } else if (!password.validity.valid) {
+    errorPassword();
+    event.preventDefault();
+  } else if (!valPassword.validity.valid) {
+    event.preventDefault();
+  }
+});
