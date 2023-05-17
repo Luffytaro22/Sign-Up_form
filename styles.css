@@ -31,6 +31,12 @@ a {
   color: antiquewhite;
 }
 
+.error {
+  color: red;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
 #logo-section {
   background-image: url("./gwen-king-3OdajQGd9sk-unsplash.jpg");
   background-repeat: no-repeat;
